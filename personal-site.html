@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logamithran's Portfolio</title>
+    <style>
+        body {
+            background-color: white; /* BEGIN: Change background color to white */
+            color: black; /* BEGIN: Change text color to black */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            display: none;
+        }
+        
+        .visible {
+            display: block;
+        }
+        
+        .button {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 48px;
+            background-color: transparent;
+            color: black; /* BEGIN: Change button text color to black */
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .credentials {
+            margin-top: 100vh;
+            padding: 50px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        .visible .credentials {
+            opacity: 1;
+        }
+        
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .credentials a {
+            display: inline-block;
+            margin: 10px;
+        }
+        
+        .credentials img {
+            width: 24px;
+            height: 24px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const button = document.getElementById('helloButton');
+            const container = document.getElementById('container');
+            
+            button.addEventListener('click', () => {
+                button.style.display = 'none'; // BEGIN: Hide the button
+                container.classList.add('visible');
+                window.scrollTo({
+                    top: container.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="helloButton" class="button">Hello</button>
+    
+    <div id="container" class="container">
+        <div class="credentials">
+            <h1>Logamithran</h1>
+            <p>Student of Engineering</p>
+            <p>Education:</p>
+            <ul>
+                <li>Student of Computer Science Engineering at Vellore Institute of Technology, Chennai (2026)</li>
+                <li>Student of Computer Science at Chettinad Vidyashram (2022)</li>
+            </ul>
+            <p>Credentials:</p>
+            <ul>
+                <li>
+                    <a href="https://github.com/loga115" target="_blank">
+                        <img src="https://github.com/favicon.ico" alt="GitHub Favicon">
+                        GitHub: loga115
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/logamithran-m-r-6992ba1b4/" target="_blank">
+                        <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn Favicon">
+                        LinkedIn: Logamithran M R
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
